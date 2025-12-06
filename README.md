@@ -25,6 +25,36 @@ LokiJS is ideal for the following scenarios:
 
 LokiJS supports indexing and views and achieves high-performance through maintaining unique and binary indexes (indices) for data.
 
+## Vector Search
+
+LokiJS now supports vector similarity search using HNSW (Hierarchical Navigable Small World) algorithm. This allows for efficient nearest neighbor search for high-dimensional vectors, useful for AI/ML applications, embeddings, and semantic search.
+
+### Usage
+
+```javascript
+// Enable vector plugin
+require('loki-vector-plugin');
+
+var db = new loki('sandbox.db');
+var items = db.addCollection('items');
+
+// Create a vector index
+items.ensureVectorIndex("embedding", {
+  M: 16,              // Max connections per node (default: 16)
+  efConstruction: 100, // Exploration factor during construction (default: 200)
+  efSearch: 50,        // Exploration factor during search (default: 50)
+  distanceFunction: 'cosine' // 'euclidean' or 'cosine' (default: 'euclidean')
+});
+
+// Insert documents with vectors
+items.insert({ name: 'apple', embedding: [1, 0, 0] });
+items.insert({ name: 'banana', embedding: [0, 1, 0] });
+
+// Find nearest neighbors
+var results = items.findNearest("embedding", [0.9, 0.1, 0], 5);
+// results: [{ name: 'apple', dist: ... }, { name: 'banana', dist: ... }]
+```
+
 ## Demo
 
 The following demos are available:
@@ -43,6 +73,7 @@ Example usage can be found on the [wiki](https://github.com/techfort/LokiJS/wiki
 4. Built-in persistence adapters, and the ability to support user-defined ones
 5. Changes API
 6. Joins
+7. Vector search capabilities (HNSW) for similarity search and embeddings
 
 ## Current state
 
@@ -56,7 +87,7 @@ _[Leave a tip](https://gratipay.com/techfort/) or give us a star if you find Lok
 
 ## Installation
 
-For browser environments you simply need the lokijs.js file contained in src/
+For browser environments you simply need the lokijs.js file contained in src/. For vector search, also include `loki-hnsw-index.js` and `loki-vector-plugin.js`.
 
 You can use bower to install lokijs with `bower install lokijs`
 

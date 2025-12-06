@@ -17,6 +17,8 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'src/lokijs.js',
+      'src/loki-hnsw-index.js',
+      'src/loki-vector-plugin.js',
       'src/incremental-indexeddb-adapter.js',
       'spec/helpers/assert-helpers.js',
       'spec/generic/*.js',
@@ -72,7 +74,14 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadlessNoSandbox'],
+
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
 
 
     // Continuous Integration mode

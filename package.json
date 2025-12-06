@@ -23,8 +23,8 @@
   ],
   "scripts": {
     "lint": "jshint src",
-    "test:browser": "karma start karma.conf.js --single-run",
-    "test:node": "istanbul cover --dir coverage/nodejs node_modules/jasmine/bin/jasmine.js",
+    "test:browser": "karma start karma.conf.js --single-run --browsers ChromeHeadlessNoSandbox",
+    "test:node": "jasmine",
     "pretest": "npm run lint",
     "test": "npm run test:browser && npm run test:node",
     "build:lokijs": "uglifyjs src/lokijs.js > build/lokijs.min.js",
@@ -48,19 +48,19 @@
   "bugs": {
     "url": "https://github.com/techfort/LokiJS/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "istanbul": "^0.4.4",
-    "jasmine": "^2.4.1",
+    "jasmine": "^2.99.0",
+    "jasmine-core": "^5.13.0",
     "jsdoc": "^3.5.5",
     "jshint": "^2.9.2",
-    "karma": "^1.1.2",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
     "karma-cli": "^1.0.1",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-jasmine": "^5.1.0",
     "mocha": "^2.5.3",
-    "phantomjs": "^1.9.20",
+    "puppeteer": "^24.32.0",
     "rimraf": "^2.5.4",
     "should": "^4.6.5",
     "uglify-js": "^2.7.0"
