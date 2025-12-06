@@ -55,6 +55,28 @@ var results = items.findNearest("embedding", [0.9, 0.1, 0], 5);
 // results: [{ name: 'apple', dist: ... }, { name: 'banana', dist: ... }]
 ```
 
+## LokiVector Server
+
+A lightweight standalone server for vector search is included in `server/`.
+
+### Start Server
+```bash
+node server/index.js
+# Server runs on port 4000 by default
+```
+
+### API Endpoints
+
+- **GET /**: Server status
+- **POST /collections**: Create collection
+  - Body: `{ "name": "items" }`
+- **POST /collections/:name/index**: Create vector index
+  - Body: `{ "field": "vector", "options": { "M": 16, "efConstruction": 100 } }`
+- **POST /collections/:name/insert**: Insert documents
+  - Body: `[{ "name": "doc1", "vector": [...] }]`
+- **POST /collections/:name/search**: Search
+  - Body: `{ "field": "vector", "vector": [...], "limit": 10 }`
+
 ## Demo
 
 The following demos are available:

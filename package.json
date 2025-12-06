@@ -64,5 +64,10 @@
     "rimraf": "^2.5.4",
     "should": "^4.6.5",
     "uglify-js": "^2.7.0"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
   }
 }
