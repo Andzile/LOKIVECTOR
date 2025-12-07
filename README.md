@@ -312,8 +312,16 @@ LokiVector is available in three editions:
 - Vector search (HNSW)
 - HTTP/TCP server
 - Crash recovery & durability
-- API keys & basic rate limiting
+- API keys & rate limiting
+- CLI & OpenAPI documentation
 - Community support
+
+**Not Included (Commercial Features):**
+- ❌ Replication (Leader-Follower) - Available in Pro/Enterprise
+- ❌ Advanced MRU Cache - Available in Pro/Enterprise
+- ❌ Dashboard - Available in Pro/Enterprise
+
+See [LICENSE_FEATURES.md](LICENSE_FEATURES.md) for complete feature mapping.
 
 ### 💼 Pro Edition (Commercial License)
 **For production applications** - Includes replication, advanced caching, dashboard, and business support.
