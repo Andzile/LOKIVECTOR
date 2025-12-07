@@ -228,8 +228,10 @@ We test crash recovery across documents, collections, and vector indexes with au
 - Embedded AI applications
 
 **License Model:**
-- Community Edition: MIT (free for open source)
+- Community Edition: MIT (free for any use, including commercial)
 - Pro/Enterprise: Commercial (replication, multi-tenant, support)
+
+**Note:** The MIT license permits commercial use. Only Commercial Features (replication, advanced MRU cache, dashboard, etc.) require a commercial license. See [LICENSE_FEATURES.md](https://github.com/MauricioPerera/LOKIVECTOR/blob/main/LICENSE_FEATURES.md) for details.
 
 Open source core, commercial features fund sustainable development.
 
