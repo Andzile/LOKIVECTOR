@@ -30,12 +30,11 @@ LokiVector solves this by being:
 This is what I'm most proud of. We test crash recovery across:
 - Documents and collections
 - Vector indexes (HNSW)
-- Replication state (oplog)
 - Partial writes and idempotency
 
 All validated with 7 comprehensive E2E test scenarios. You can literally kill the process mid-write and it recovers correctly.
 
-**We test crash recovery across documents, collections, vector indexes and replication with automated end-to-end tests.**
+**Note:** Replication recovery is tested in Commercial editions. The Community Edition focuses on core durability.
 
 ### What's Included
 
