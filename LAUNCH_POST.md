@@ -70,12 +70,12 @@ All validated with 7 comprehensive E2E test scenarios. You can literally kill th
 ### Getting Started
 
 ```bash
-npm install lokijs
+npm install @lokivector/core
 ```
 
 ```javascript
-const loki = require('lokijs');
-require('lokijs/src/loki-vector-plugin');
+const loki = require('@lokivector/core');
+require('@lokivector/core/src/core/loki-vector-plugin');
 
 const db = new loki('example.db', { autosave: true });
 const items = db.addCollection('items', {
@@ -88,14 +88,14 @@ const results = items.findNearest('embedding', [0.1, 0.2, 0.3], 5);
 
 ### Documentation
 
-- [Full Documentation](https://github.com/MauricioPerera/db)
-- [Durability & Crash Recovery](docs/DURABILITY.md)
-- [Deployment Guide](docs/DEPLOYMENT.md)
-- [Editions Comparison](EDITIONS.md)
+- [Full Documentation](https://github.com/MauricioPerera/LOKIVECTOR)
+- [Durability & Crash Recovery](https://github.com/MauricioPerera/LOKIVECTOR/blob/main/docs/DURABILITY.md)
+- [Deployment Guide](https://github.com/MauricioPerera/LOKIVECTOR/blob/main/docs/DEPLOYMENT.md)
+- [Editions Comparison](https://github.com/MauricioPerera/LOKIVECTOR/blob/main/EDITIONS.md)
 
 ### License
 
-Community Edition: MIT (free for open source and non-commercial use)  
+Community Edition: MIT (free for any use)  
 Pro/Enterprise: Commercial license available
 
 ### Why Open Source This?
@@ -117,18 +117,18 @@ I'm open-sourcing the core because:
 ### Try It Out
 
 ```bash
-git clone https://github.com/MauricioPerera/db.git
-cd db
+git clone https://github.com/MauricioPerera/LOKIVECTOR.git
+cd LOKIVECTOR
 npm install
 npm test
-node server/index.js
+node server/core/index.js
 ```
 
 I'd love to hear your feedback, use cases, and contributions!
 
-**GitHub:** https://github.com/MauricioPerera/db  
-**Docs:** https://github.com/MauricioPerera/db/tree/main/docs  
-**Issues:** https://github.com/MauricioPerera/db/issues
+**GitHub:** https://github.com/MauricioPerera/LOKIVECTOR  
+**Docs:** https://github.com/MauricioPerera/LOKIVECTOR/tree/main/docs  
+**Issues:** https://github.com/MauricioPerera/LOKIVECTOR/issues
 
 ---
 
@@ -157,7 +157,7 @@ LokiVector is:
 
 3/ The durability story:
 
-We test crash recovery across documents, collections, vector indexes, and replication with automated end-to-end tests.
+We test crash recovery across documents, collections, and vector indexes with automated end-to-end tests.
 
 You can kill the process mid-write and it recovers correctly. Zero data loss.
 
@@ -171,10 +171,11 @@ You can kill the process mid-write and it recovers correctly. Zero data loss.
 5/ Getting started:
 
 ```bash
-npm install lokijs
+npm install @lokivector/core
 ```
 
 ```javascript
+const loki = require('@lokivector/core');
 const db = new loki('example.db');
 const items = db.addCollection('items', {
   vectorIndices: { embedding: { m: 16 } }
@@ -190,11 +191,11 @@ Open source core, commercial features fund development.
 7/ Try it:
 
 ```bash
-git clone https://github.com/MauricioPerera/db.git
-cd db && npm install && npm test
+git clone https://github.com/MauricioPerera/LOKIVECTOR.git
+cd LOKIVECTOR && npm install && npm test
 ```
 
-Docs: https://github.com/MauricioPerera/db
+Docs: https://github.com/MauricioPerera/LOKIVECTOR
 
 Feedback welcome! 🎉
 
@@ -217,7 +218,7 @@ LokiVector combines:
 - Embeddable (runs in Node.js or browser)
 
 **What Makes It Different:**
-We test crash recovery across documents, collections, vector indexes, and replication with automated end-to-end tests. You can literally kill the process mid-write and it recovers correctly.
+We test crash recovery across documents, collections, and vector indexes with automated end-to-end tests. You can literally kill the process mid-write and it recovers correctly.
 
 **Use Cases:**
 - Semantic search in RAG applications
@@ -234,10 +235,10 @@ Open source core, commercial features fund sustainable development.
 
 **Try It:**
 ```bash
-npm install lokijs
+npm install @lokivector/core
 ```
 
-Full documentation and examples: https://github.com/MauricioPerera/db
+Full documentation and examples: https://github.com/MauricioPerera/LOKIVECTOR
 
 I'd love to hear your feedback and use cases!
 
